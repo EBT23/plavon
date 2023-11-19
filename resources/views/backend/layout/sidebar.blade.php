@@ -3,8 +3,8 @@
     <!-- ! Hide app brand if navbar-full -->
     <div class="text-center mt-2">
         <a href="/dashboard">
-            <img src="{{ asset('assets/img/logo-pvc.png') }}" class="img-fluid" alt="Gambar" 
-                style="width: 50%; height:100%; "> 
+            <img src="{{ asset('assets/img/logo-pvc.png') }}" class="img-fluid" alt="Gambar"
+                style="width: 50%; height:100%; ">
         </a>
     </div>
     <div class="app-brand demo">
@@ -14,7 +14,7 @@
     </div>
 
     <div class="menu-inner-shadow"></div>
-        @if (request()->user()->role_id == 1)    
+        @if (request()->user()->role_id == 1)
         <ul class="menu-inner py-1">
             <li class="menu-item">
                 <a href="/dashboard" class="menu-link ">
@@ -43,17 +43,17 @@
                             <div>Kelola Penanggung Jawab</div>
                         </a>
                     </li>
-                    
+
                     <li class="menu-item ">
                         <a href="/cm" class="menu-link">
                             <div>Kelola Count Manager</div>
                         </a>
                     </li>
-                    <li class="menu-item ">
+                    {{-- <li class="menu-item ">
                         <a href="/penjualan" class="menu-link">
                             <div>Penjualan</div>
                         </a>
-                    </li>
+                    </li> --}}
                     <li class="menu-item ">
                         <a href="/pemesanan" class="menu-link">
                             <div>Pemesanan</div>
@@ -110,8 +110,8 @@
             </li>
         </ul>
         @endif
-            
-     
+
+
         {{-- <ul class="menu-inner py-1">
             <li class="menu-item">
                 <a href="/dashboard" class="menu-link ">
@@ -125,8 +125,8 @@
             </a>
         </li>
     </ul> --}}
-        
 
-  
+
+
 
 </aside>

@@ -17,13 +17,13 @@ class BarangController extends Controller
     {
         $data['title'] = 'Kelola barang';
         $token = session('access_token');
-        
+
         $response = Http::withToken("$token")->get('http://plavon.dlhcode.com/api/barang');
 
         $body = $response->getBody();
         $data['barang'] = json_decode($body,true);
         $data['barang'] = $data['barang']['data'];
-        
+
         return view('backend.barang.index', $data);
     }
     public function add()
@@ -48,6 +48,7 @@ class BarangController extends Controller
             'harga' => 'required',
             'ukuran' => 'required',
             'deskripsi' => 'required',
+            'image' => 'required|image|max:2048',
         ]);
 
         try {
